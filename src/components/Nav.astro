@@ -1,0 +1,132 @@
+<nav class="nav">
+  <div class="nav-section-left">
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <span class="nav-link">SHOP</span>
+        <span class="dropdown-icon">&#709;</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link">OM OS</span>
+        <span class="dropdown-icon">&#709;</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link">SAMARBEJDE</span>
+        <span class="dropdown-icon">&#709;</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link">STØT</span>
+        <span class="dropdown-icon">&#709;</span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link">KONTAKT</span>
+        <span class="dropdown-icon">&#709;</span>
+      </li>
+    </ul>
+  </div>
+  <div class="logo">
+    <img src="/public/LOGO.png" class="billede_logo" alt="Logo" />
+  </div>
+  <div class="nav-section-right">
+    <div class="nav-item">
+      <span class="nav-link">Kurv (0)</span>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    color: #3d5c6d;
+    margin-top: -30px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    cursor: pointer;
+    display: none; /* Skjuler burgerikonet i desktopversionen */
+    padding: 0.5rem;
+    user-select: none;
+  }
+
+  .nav-toggle-label span {
+    background-color: white;
+    display: block;
+    height: 2px;
+    width: 2rem;
+    position: relative;
+  }
+
+  .nav-toggle-label span:before,
+  .nav-toggle-label span:after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .nav-toggle-label span:before {
+    top: -0.7rem;
+  }
+
+  .nav-toggle-label span:after {
+    top: 0.7rem;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:before {
+    transform: translateY(0.7rem) rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:after {
+    transform: translateY(-0.7rem) rotate(-45deg);
+  }
+
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .nav-item {
+    margin-right: 2rem;
+    position: relative;
+  }
+
+  .dropdown-icon {
+    display: inline-block;
+    margin-left: 0.3rem;
+    position: absolute;
+    top: 4px;
+  }
+
+  .logo {
+    margin-right: 200px; /* Placerer logoet helt til venstre */
+    margin-left: 20px; /* Juster margenen efter behov */
+  }
+
+  .billede_logo {
+    width: 100px; /* Juster bredden efter behov */
+    height: auto; /* Bevar proportionerne */
+    margin-top: 15px; /* Tilføj en margin øverst for at rykke billedet ned */
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none; /* Skjuler menuen i mobilversionen */
+    }
+
+    .nav-toggle-label {
+      display: block; /* Viser burgerikonet i mobilversionen */
+    }
+  }
+</style>
