@@ -1,0 +1,27 @@
+body {
+  overflow: hidden;
+}
+
+.header-image {
+  grid-column: 1/-1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.gardin_h {
+  position: relative;
+  left: 620px;
+  width: 50%;
+}
+
+.gardin_v {
+  position: relative;
+  z-index: 1;
+  top: -734px;
+  width: 50%;
+}

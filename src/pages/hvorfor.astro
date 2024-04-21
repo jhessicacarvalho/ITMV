@@ -1,0 +1,64 @@
+---
+import "../styles/main.css";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <MainLayout />
+    <img
+      class="header-image"
+      src="../../public/gradient3.png"
+      alt="gradient baggrund"
+    />
+    <div class="grid">
+      <div class="box">
+        <h2>Hvorfor vælge os?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br /> sed do
+          eiusmod tempor incididunt ut labore et <br /> dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation <br /> ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure <br /> dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut <br /> labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation <br /> ullamco laboris
+          nisi ut aliquip ex ea <br /> commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse <br /> cillum dolore eu
+          fugiat nulla pariatur.
+        </p>
+      </div>
+      <img class="img_class" src="../../public/ira.png" alt="" />
+    </div>
+  </body>
+</html>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .box {
+    background-color: #ffffff5b;
+    padding: 40px; /* indvendig polstring */
+    width: fit-content; /* justerer bredden til indholdet */
+    align-self: center;
+    place-self: center;
+  }
+
+  .img_class {
+    height: 90%;
+    place-self: center;
+  }
+</style>
