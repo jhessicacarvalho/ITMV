@@ -1,0 +1,74 @@
+---
+import "../styles/main.css";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <MainLayout />
+    <img
+      class="header-image1"
+      src="public/ big_gradient.png"
+      alt="gradient baggrund"
+    />
+    <h1>Vores repair service team</h1>
+    <div class="team_box" class="grid">
+      <img src="../../public/olena.png" alt="" />
+      <img src="../../public/luna_team.png" alt="" />
+      <img src="../../public/luna.png" alt="" />
+    </div>
+
+    <div class="grid2">
+      <img src="../../public/menu1.png" alt="" />
+      <img src="../../public/menu2.png" alt="" />
+      <img src="../../public/menu4.png" alt="" />
+      <img src="../../public/menu1.png" alt="" />
+      <img src="../../public/menu2.png" alt="" />
+      <img src="../../public/menu4.png" alt="" />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    overflow: auto;
+  }
+
+  .header-image1 {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 50px;
+
+    height: 50%;
+  }
+
+  .team_box {
+    padding: 20px;
+    width: fit-content;
+    background-color: #ffffff5b;
+    margin-bottom: 200px;
+  }
+</style>
