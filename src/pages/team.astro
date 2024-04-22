@@ -20,11 +20,29 @@ import MainLayout from "../layouts/MainLayout.astro";
     />
     <h1>Vores repair service team</h1>
     <div class="team_box" class="grid">
-      <img src="../../public/olena.png" alt="" />
-      <img src="../../public/luna_team.png" alt="" />
-      <img src="../../public/luna.png" alt="" />
+      <div>
+        <img src="../../public/olena.png" alt="" />
+        <p>
+          Olena - ITMV SYERSKE <br /> Er specialiseret i visible mending og
+          tilpasning.
+        </p>
+      </div>
+      <div>
+        <img src="../../public/luna_team.png" alt="" />
+        <p>
+          Ira - ITMV SYERSKE <br /> Er specialiseret i tøj reperationer og
+          tilpasning.
+        </p>
+      </div>
+      <div>
+        <img src="../../public/luna.png" alt="" />
+        <p>
+          Luna - ITMV DESIGNASSISTENT <br />
+           Er specialiseret i tøj reperationer og  tilpasning.
+        </p>
+      </div>
     </div>
-
+    <h1>Reperationsmenu</h1>
     <div class="grid2">
       <img src="../../public/menu1.png" alt="" />
       <img src="../../public/menu2.png" alt="" />
@@ -48,13 +66,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     z-index: -1;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-  }
-
   .grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -62,15 +73,24 @@ import MainLayout from "../layouts/MainLayout.astro";
     justify-items: center;
     padding-top: 50px;
     margin-top: 50px;
-    height: 50%;
+  }
+
+  .grid2 img {
+    height: 80%;
   }
 
   .team_box {
     display: grid;
-    padding: 20px;
-    width: fit-content;
-    background-color: #ffffff5b;
-    margin-bottom: 200px;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner med samme bredde */
+    justify-content: center; /* Centrer indholdet horisontalt */
     justify-items: center;
+    padding: 20px;
+    background-color: #ffffff5b;
+    margin-bottom: 100px;
+  }
+
+  .team_box img {
+    max-width: 100%; /* Sørg for, at billederne ikke strækker sig ud over deres container */
+    height: auto; /* Bevar billedets proportioner */
   }
 </style>
