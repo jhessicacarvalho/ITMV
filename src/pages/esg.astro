@@ -28,6 +28,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         />
          tekstilvirksomhed med social ansvarlighed som kompas.
       </p>
+      <div class="grid_2_1">
+        <div>
       <p>
         Vi fokuserer på at styrke jeres Social mål, ved bidrage til et rummeligt
         arbejdsmarked ved at ansætte kvinder i ordinær beskæftigelse <br /> med
@@ -38,6 +40,11 @@ import MainLayout from "../layouts/MainLayout.astro";
         produktion, <br /> hvor kasserede tekstiler kan få nyt liv i stedet for
         at ende på forbrændingen.
       </p>
+    </div>
+      <div>
+      <img class="logo_class" src="../../public/logo_entradadgangen.png" alt="" />
+    </div>
+  </div>
     </section>
   </body>
 </html>
@@ -50,5 +57,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     padding: 40px; /* indvendig polstring */
     width: fit-content; /* justerer bredden til indholdet */
     place-items: center;
+  }
+
+  .grid_2_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo_class{
+    scale: 0.6;
   }
 </style>
