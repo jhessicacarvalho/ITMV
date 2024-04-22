@@ -13,28 +13,41 @@ import "../styles/main.css";
   </head>
   <body>
     <MainLayout />
-    <img
-      class="header-image"
-      src="../../public/gradient.png"
-      alt="gradient baggrund"
-    />
-    <img class="gardin_h" src="../../public/gardiner_h.webp" alt="" />
-    <img class="gardin_v" src="../../public/gardiner_v.webp" alt="" />
+    <div class="grid">
+      <h1>Repair Service</h1>
+      <img id="v" src="../../public/gardiner_v.webp" alt="" />
+      <img id="h" src="../../public/gardiner_h.webp" alt="" />
+    </div>
   </body>
 </html>
 
 <style>
-  .gardin_v {
-    position: relative;
-    z-index: 1;
-    left: -700px;
-    top: -200px;
-    width: 40%;
+  .grid {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner */
+    justify-items: center; /* Centrer indholdet vandret */
+    align-items: center; /* Centrer indholdet lodret */
   }
 
-  .gardin_h {
-    position: relative;
-    left: 620px;
-    width: 50%;
+  .grid img {
+    height: 100%;
+  }
+
+  #v {
+    justify-self: end;
+  }
+
+  #h {
+    justify-self: baseline;
+  }
+
+  h1 {
+    position: absolute; /* Positionér h1 absolut */
+    top: 150px; /* Placer øverst i .grid */
+    left: 50%; /* Centrer vandret i forhold til .grid */
+    transform: translateX(-50%); /* Juster for at centrere præcist */
+    z-index: 1; /* Sørg for, at h1 er foran gardinerne */
+    font-size: 3rem;
   }
 </style>
