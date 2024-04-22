@@ -13,11 +13,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   </head>
   <body>
     <MainLayout />
-    <img
-      class="header-image"
-      src="../../public/gradient3.png"
-      alt="gradient baggrund"
-    />
+
     <section class="box">
       <h2>ENVIRONMENTAL, SOCIAL AND GOVERNANCE</h2>
       <p>
@@ -30,31 +26,37 @@ import MainLayout from "../layouts/MainLayout.astro";
       </p>
       <div class="grid_2_1">
         <div>
-      <p>
-        Vi fokuserer på at styrke jeres Social mål, ved bidrage til et rummeligt
-        arbejdsmarked ved at ansætte kvinder i ordinær beskæftigelse <br /> med
-        fokus på kvindernes kompetencer og ressourcer, som skal sættes i spil på
-        det danske arbejdsmarked. Vi tror på, at mennesker bliver gladere <br />
-         og stærkere af at arbejde med noget de brænder for. Desuden ønsker vi
-        at bidrage til den grønne omstilling ved at skabe en cirkulær
-        produktion, <br /> hvor kasserede tekstiler kan få nyt liv i stedet for
-        at ende på forbrændingen.
-      </p>
-    </div>
-      <div>
-      <img class="logo_class" src="../../public/logo_entradadgangen.png" alt="" />
-    </div>
-  </div>
+          <p>
+            Vi fokuserer på at styrke jeres Social mål, ved bidrage til et
+            rummeligt arbejdsmarked ved at ansætte kvinder i ordinær
+            beskæftigelse med fokus på kvindernes kompetencer og ressourcer, som
+            skal sættes i spil på det danske arbejdsmarked. Vi tror på, at
+            mennesker bliver gladere og stærkere af at arbejde med noget de
+            brænder for. <br /> Desuden ønsker vi at bidrage til den grønne
+            omstilling ved at skabe en cirkulær produktion, hvor kasserede
+            tekstiler kan få nyt liv i stedet for at ende på forbrændingen.
+          </p>
+        </div>
+        <div>
+          <img
+            class="logo_class"
+            src="../../public/logo_entradadgangen.png"
+            alt=""
+          />
+        </div>
+      </div>
     </section>
+    <img class="buks" src="public/buks3.webp" alt="" />
+    <img class="sygning" src="public/sygning.webp" alt="" />
   </body>
 </html>
 
 <style>
   .box {
     background-color: #ffffff5b;
-    padding: 80px; /* indvendig polstring */
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 30px; /* indvendig polstring */
+    margin-left: 200px;
+    margin-right: 200px;
     margin-top: 60px;
     width: fit-content; /* justerer bredden til indholdet */
     align-self: center;
@@ -64,9 +66,25 @@ import MainLayout from "../layouts/MainLayout.astro";
   .grid_2_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 40vh;
   }
 
-  .logo_class{
+  .logo_class {
     scale: 0.6;
+    height: 100%;
+  }
+
+  .buks {
+    position: relative;
+    scale: 0.5;
+    rotate: -20deg;
+    top: -350px;
+    left: -130px;
+  }
+
+  .sygning {
+    position: relative;
+    scale: 1.8;
+    top: -550px;
   }
 </style>
