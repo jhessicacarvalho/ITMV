@@ -1,6 +1,7 @@
 body {
   overflow: hidden;
   font-family: Helvetica;
+  background-image: url(public/gradient3.png);
 }
 
 .header-image {

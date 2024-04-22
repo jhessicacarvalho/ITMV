@@ -13,39 +13,32 @@ import "../styles/main.css";
   </head>
   <body>
     <MainLayout />
-    <img
-      class="header-image"
-      src="../../public/gradient.png"
-      alt="gradient baggrund"
-    />
+
     <div class="grid">
-      <div class="gardin_v">
-        <img src="../../public/gardiner_v.webp" alt="" />
-      </div>
-      <div class="gardin_h">
-        <img src="../../public/gardiner_h.webp" alt="" />
-      </div>
+      <img id="v" src="../../public/gardiner_v.webp" alt="" />
+      <img id="h" src="../../public/gardiner_h.webp" alt="" />
     </div>
   </body>
 </html>
 
 <style>
   .grid {
+    height: 70vh;
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner */
     justify-items: center; /* Centrer indholdet vandret */
     align-items: center; /* Centrer indholdet lodret */
   }
 
-  .gardin_h {
-    justify-self: start;
-    max-height: 100%;
-    max-width: 100%;
+  .grid img {
+    height: 100%;
   }
 
-  .gardin_v {
+  #v {
     justify-self: end;
-    max-height: 100%;
-    max-width: 100%;
+  }
+
+  #h {
+    justify-self: baseline;
   }
 </style>
