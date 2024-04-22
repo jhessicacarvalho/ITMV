@@ -18,7 +18,6 @@ import MainLayout from "../layouts/MainLayout.astro";
       src="../../public/gradient3.png"
       alt="gradient baggrund"
     />
-    <div class="grid">
       <div class="box">
         <h2>HØR FRA EN AF VORES SAMARBEJDSPARTNERE: KAB</h2>
         <p><strong>Hvorfor valgte I at indgå i et samarbejde med ITMV om Repair Service?</strong></p>
@@ -31,34 +30,42 @@ import MainLayout from "../layouts/MainLayout.astro";
           <strong>Hvad synes du om at din arbejdsplads tilbyder ITMV Repair Service?</strong>
         </p>
         <p>”Det er helt fantastisk, en af de bedste personalegoder jeg har oplevet i KAB. Den rammer lige ind i bæredygtighedsdagsordenen, og gør det enormt nemt. Samtidig løser ordningen også et dårlig samvittighedsproblem. Jeg ville rigtig gerne reparerer mit tøj frem for at smide det ud, men problemet er at man skal finde en god skrædder og samtidig skal man forbi i deres åbningstid, den er løst her. Derudover kan det være enormt dyrt.”</p>
-        <p><strong>Jonas Mørch Cohen, Kundechef KAB</strong></p>
+        <div class="grid">
+          <div><p><strong>Jonas Mørch Cohen, Kundechef KAB</strong></p>
         <img src="../../public/line.png" alt="">
        <p><strong>Hvad synes du om ITMV Repair Service?</strong></p>
        <p>”Fantastisk koncept. Jeg er glad for at kunne hjælpe de to syerske, der har været siddet i KAB-Huset med at få foden ind på arbejdsmarkedet og blive en del af et socialt og forpligtende fællesskab. Jeg er stor fortaler for genbrug og genanvendelse, så i det større perspektivgør det bare jeres projekt endnu bedre.”</p>
        <p><strong>Mark Petterson, Digital redaktør KAB</strong></p>
+</div>
+<div>
+       <img class="img_class" src="../../public/kab.png" alt="" />
       </div>
-     <img class="img_class" src="../../public/ira.png" alt="" />
-      </p>
-    </div>
+      </div>
+      </div>
   </body>
 </html>
 
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .box {
     background-color: #ffffff5b;
-    padding: 40px; /* indvendig polstring */
+    padding: 80px; /* indvendig polstring */
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
     width: fit-content; /* justerer bredden til indholdet */
     align-self: center;
     place-self: center;
   }
 
   .img_class {
+    position: relative;
     height: 90%;
     place-self: center;
+    scale: 0.8;
   }
 </style>
