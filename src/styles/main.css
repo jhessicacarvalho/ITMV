@@ -13,16 +13,3 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
-.gardin_h {
-  position: relative;
-  left: 620px;
-  width: 50%;
-}
-
-.gardin_v {
-  position: relative;
-  z-index: 1;
-  top: -734px;
-  width: 50%;
-}

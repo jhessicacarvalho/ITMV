@@ -18,23 +18,30 @@ import "../styles/main.css";
       src="../../public/gradient.png"
       alt="gradient baggrund"
     />
-    <img class="gardin_h" src="../../public/gardiner_h.webp" alt="" />
-    <img class="gardin_v" src="../../public/gardiner_v.webp" alt="" />
+    <div class="grid">
+      <div>
+        <img class="gardin_v" src="../../public/gardiner_v.webp" alt="" />
+      </div>
+      <div>
+        <img class="gardin_h" src="../../public/gardiner_h.webp" alt="" />
+      </div>
+    </div>
   </body>
 </html>
 
 <style>
-  .gardin_v {
-    position: relative;
-    z-index: 1;
-    left: -700px;
-    top: -200px;
-    width: 40%;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner */
+    justify-items: center; /* Centrer indholdet vandret */
+    align-items: center; /* Centrer indholdet lodret */
   }
 
   .gardin_h {
-    position: relative;
-    left: 620px;
-    width: 50%;
+    justify-self: start;
+  }
+
+  .gardin_v {
+    justify-self: end;
   }
 </style>
