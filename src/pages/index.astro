@@ -13,8 +13,8 @@ import "../styles/main.css";
   </head>
   <body>
     <MainLayout />
-
     <div class="grid">
+      <h1>Repair Service</h1>
       <img id="v" src="../../public/gardiner_v.webp" alt="" />
       <img id="h" src="../../public/gardiner_h.webp" alt="" />
     </div>
@@ -23,7 +23,7 @@ import "../styles/main.css";
 
 <style>
   .grid {
-    height: 70vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner */
     justify-items: center; /* Centrer indholdet vandret */
@@ -40,5 +40,14 @@ import "../styles/main.css";
 
   #h {
     justify-self: baseline;
+  }
+
+  h1 {
+    position: absolute; /* Positionér h1 absolut */
+    top: 150px; /* Placer øverst i .grid */
+    left: 50%; /* Centrer vandret i forhold til .grid */
+    transform: translateX(-50%); /* Juster for at centrere præcist */
+    z-index: 1; /* Sørg for, at h1 er foran gardinerne */
+    font-size: 3rem;
   }
 </style>
