@@ -1,0 +1,21 @@
+---
+const { type = "button", size = "md" } = Astro.props;
+---
+
+<button {type} data-size={size}>
+  <slot />
+</button>
+
+<style>
+  button {
+    font: inherit;
+    cursor: pointer;
+    border-style: dashed;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: #e94c28;
+    background-color: #f0eeea;
+    width: 150px; /* Ændr bredden efter behov */
+    padding: 5px 10px;
+  }
+</style>

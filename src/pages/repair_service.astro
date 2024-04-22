@@ -1,12 +1,97 @@
 ---
+import Button from "../components/Button.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/main.css";
 ---
 
-<MainLayout />
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <img
+      class="header-image"
+      src="public/ big_gradient.png"
+      alt="gradient baggrund"
+    />
+    <MainLayout />
+    <div class="content-container">
+      <h1>SKAB BÆREDYGTIGHED FOR DIN <br />VIRKSOMHED MED REPAIR SERVICE</h1>
+      <p>
+        Vores samarbejde med forskellige interessenter gør det muligt for os at <br
+        />
+        skabe jobmuligheder, netværk og livskvalitet for mennesker, som står <br
+        />udenfor det danske arbejdsmarked.
+      </p>
+      <Button>KØB NU</Button>
+    </div>
+    <img src="/buks2.webp" alt="Bukselomme 1" class="billede-1" />
+    <img src="/buks1.webp" alt="Bukselomme 2" class="billede-2" />
+    <img src="/buks3.webp" alt="Bukselomme 3" class="billede-3" />
+  </body>
+</html>
 
-<h1>SKAB BÆREDYGTIGHED FOR DIN VIRKSOMHED MED REPAIR SERVICE</h1>
-<p>
-  Vores samarbejde med forskellige interessenter gør det muligt for os at skabe
-  jobmuligheder, netværk og livskvalitet for mennesker, som står udenfor det
-  danske arbejdsmarked.
-</p>
+<style>
+  .content-container {
+    margin-left: 60px; /* Flytter indholdet til højre */
+    max-width: 850px; /* Juster bredden efter behov */
+    padding: 25px; /* Tilføj polstring efter behov */
+    position: relative;
+  }
+  .billede-1 {
+    position: absolute;
+    top: 500px;
+    left: -100px; /* Flyt billedet 100px til venstre */
+    width: 200px;
+    height: auto;
+    transform: rotate(-10deg);
+    /* bottom: 0; */ /* Kommenteret ud for at blive ændret via JavaScript */
+  }
+
+  .billede-2 {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 150px;
+    height: auto;
+    transform: rotate(5deg);
+    z-index: 1;
+  }
+
+  .billede-3 {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 250px;
+    height: auto;
+    transform: rotate(3deg);
+  }
+</style>
+
+<script>
+  window.addEventListener("load", function () {
+    var contentContainer = document.querySelector(".content-container");
+    var billede1 = document.querySelector(".billede-1");
+
+    // Tjek om billede1 er blevet fundet korrekt
+    if (billede1) {
+      // Find højden af .content-container
+      var contentHeight = contentContainer.getBoundingClientRect().height;
+
+      // Find højden af billede-1
+      var billede1Height = billede1.getBoundingClientRect().height;
+
+      // Beregn forskellen mellem højden af .content-container og højden af billede-1
+      var cropAmount = billede1Height - contentHeight;
+
+      // Anvend den beregnede værdi til billede 1
+      billede1.style.marginTop = "-" + cropAmount + "px";
+    } else {
+      console.error("Billede 1 blev ikke fundet.");
+    }
+  });
+</script>
