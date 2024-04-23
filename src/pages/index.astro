@@ -14,7 +14,8 @@ import "../styles/main.css";
   <body>
     <MainLayout />
     <div class="grid">
-      <h1>Repair Service</h1>
+      <h1 class="repair">Repair</h1>
+      <h1 class="service">Service</h1>
       <img id="v" src="../../public/gardiner_v.webp" alt="" />
       <img id="h" src="../../public/gardiner_h.webp" alt="" />
     </div>
@@ -42,10 +43,19 @@ import "../styles/main.css";
     justify-self: baseline;
   }
 
-  h1 {
+  .repair {
     position: absolute; /* Positionér h1 absolut */
     top: 150px; /* Placer øverst i .grid */
-    left: 50%; /* Centrer vandret i forhold til .grid */
+    left: 42%; /* Centrer vandret i forhold til .grid */
+    transform: translateX(-50%); /* Juster for at centrere præcist */
+    z-index: 1; /* Sørg for, at h1 er foran gardinerne */
+    font-size: 3rem;
+  }
+
+  .service {
+    position: absolute; /* Positionér h1 absolut */
+    top: 150px; /* Placer øverst i .grid */
+    left: 58%; /* Centrer vandret i forhold til .grid */
     transform: translateX(-50%); /* Juster for at centrere præcist */
     z-index: 1; /* Sørg for, at h1 er foran gardinerne */
     font-size: 3rem;

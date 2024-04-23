@@ -13,11 +13,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   </head>
   <body>
     <MainLayout />
-    <img
-      class="header-image1"
-      src="public/ big_gradient.png"
-      alt="gradient baggrund"
-    />
+
     <h1>Vores repair service team</h1>
     <div class="team_box" class="grid">
       <div>
@@ -92,5 +88,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   .team_box img {
     max-width: 100%; /* Sørg for, at billederne ikke strækker sig ud over deres container */
     height: auto; /* Bevar billedets proportioner */
+  }
+
+  h1 {
+    text-align: center;
   }
 </style>
