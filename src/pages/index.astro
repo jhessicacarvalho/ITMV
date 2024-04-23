@@ -3,24 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/main.css";
 ---
 
-<html lang="da">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <MainLayout />
-    <div class="grid">
-      <h1 class="repair">Repair</h1>
-      <h1 class="service">Service</h1>
-      <img id="v" src="../../public/gardiner_v.webp" alt="" />
-      <img id="h" src="../../public/gardiner_h.webp" alt="" />
-    </div>
-  </body>
-</html>
+<MainLayout title="Index">
+  <div class="grid">
+    <h1 class="repair">Repair</h1>
+    <h1 class="service">Service</h1>
+    <img id="v" src="../../public/gardiner_v.webp" alt="" />
+    <img id="h" src="../../public/gardiner_h.webp" alt="" />
+  </div>
+</MainLayout>
 
 <style>
   .grid {
