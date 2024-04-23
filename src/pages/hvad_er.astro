@@ -13,11 +13,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   </head>
   <body>
     <MainLayout />
-    <img
-      class="header-image"
-      src="../../public/gradient3.png"
-      alt="gradient baggrund"
-    />
+
     <div class="grid">
       <div class="box">
         <h2>Hvad er repair service?</h2>
@@ -41,6 +37,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       </div>
       <img class="img_class" src="../../public/hvad_er.png" alt="" />
     </div>
+    <img class="needle" src="public/langtrad_nal.webp" alt="" />
   </body>
 </html>
 
@@ -52,7 +49,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   .box {
     background-color: #ffffff5b;
-    padding: 40px; /* indvendig polstring */
+    padding: 20px; /* indvendig polstring */
     width: fit-content; /* justerer bredden til indholdet */
     align-self: center;
     place-self: center;
@@ -61,5 +58,10 @@ import MainLayout from "../layouts/MainLayout.astro";
   .img_class {
     height: 90%;
     place-self: center;
+  }
+
+  .needle {
+    top: -180px;
+    position: relative;
   }
 </style>

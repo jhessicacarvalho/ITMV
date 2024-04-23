@@ -13,11 +13,6 @@ import "../styles/main.css";
     <title>Astro</title>
   </head>
   <body>
-    <img
-      class="header-image"
-      src="public/ big_gradient.png"
-      alt="gradient baggrund"
-    />
     <MainLayout />
     <div class="content-container">
       <h1>SKAB BÆREDYGTIGHED FOR DIN <br />VIRKSOMHED MED REPAIR SERVICE</h1>
@@ -30,68 +25,86 @@ import "../styles/main.css";
       <Button>KØB NU</Button>
     </div>
     <img src="/buks2.webp" alt="Bukselomme 1" class="billede-1" />
-    <img src="/buks1.webp" alt="Bukselomme 2" class="billede-2" />
-    <img src="/buks3.webp" alt="Bukselomme 3" class="billede-3" />
+    <div class="billede-container">
+      <img src="/buks1.webp" alt="Bukselomme 2" class="billede-2" />
+      <img src="/buks3.webp" alt="Bukselomme 3" class="billede-3" />
+    </div>
+    <img src="/sygning.webp" alt="syning illustration" class="syning" />
   </body>
 </html>
 
 <style>
+  /* tekst*/
   .content-container {
-    margin-left: 60px; /* Flytter indholdet til højre */
-    max-width: 850px; /* Juster bredden efter behov */
-    padding: 25px; /* Tilføj polstring efter behov */
-    position: relative;
+    margin-left: 138px;
+    max-width: 850px;
+    padding: 25px;
+    position: absolute;
+    top: 164px;
+    overflow: hidden;
   }
+
+  .content-container h1 {
+    line-height: 1.1;
+    font-size: 40px;
+    margin-top: 0; /* Nulstil toppen margin */
+    margin-bottom: 5px;
+  }
+
+  .content-container p {
+    font-size: 19px;
+    margin-top: 0; /* Nulstil toppen margin */
+    margin-bottom: 10px;
+  }
+  /* bukselommerne */
   .billede-1 {
     position: absolute;
     top: 500px;
-    left: -100px; /* Flyt billedet 100px til venstre */
-    width: 200px;
+    left: -92px;
+    width: 250px;
     height: auto;
-    transform: rotate(-10deg);
-    /* bottom: 0; */ /* Kommenteret ud for at blive ændret via JavaScript */
+    transform: translateY(-5%) rotate(-42deg);
+    overflow: hidden;
+  }
+
+  .billede-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Sørg for at containeren dækker hele viewport */
+    overflow: hidden; /* Skjul overskydende indhold */
+  }
+
+  .billede-2,
+  .billede-3 {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    overflow: hidden;
   }
 
   .billede-2 {
-    position: absolute;
-    top: 100px;
-    right: 50px;
-    width: 150px;
-    height: auto;
-    transform: rotate(5deg);
+    right: -3%;
+    width: 290px;
     z-index: 1;
+    transform: translateY(0) rotate(24deg);
+    overflow: hidden;
   }
 
   .billede-3 {
-    position: absolute;
-    top: 200px;
-    right: 0;
-    width: 250px;
-    height: auto;
-    transform: rotate(3deg);
+    right: 253px;
+    width: 245px;
+    transform-origin: top;
+    transform: translateY(28%) rotate(-23deg);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .syning {
+    position: relative;
+    left: 198px;
+    top: 0px;
+    transform: translateY(440%) rotate(10deg);
+    width: 900px;
+    overflow: hidden;
   }
 </style>
-
-<script>
-  window.addEventListener("load", function () {
-    var contentContainer = document.querySelector(".content-container");
-    var billede1 = document.querySelector(".billede-1");
-
-    // Tjek om billede1 er blevet fundet korrekt
-    if (billede1) {
-      // Find højden af .content-container
-      var contentHeight = contentContainer.getBoundingClientRect().height;
-
-      // Find højden af billede-1
-      var billede1Height = billede1.getBoundingClientRect().height;
-
-      // Beregn forskellen mellem højden af .content-container og højden af billede-1
-      var cropAmount = billede1Height - contentHeight;
-
-      // Anvend den beregnede værdi til billede 1
-      billede1.style.marginTop = "-" + cropAmount + "px";
-    } else {
-      console.error("Billede 1 blev ikke fundet.");
-    }
-  });
-</script>
