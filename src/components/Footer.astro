@@ -1,5 +1,5 @@
 <div class="grid_1_1_1">
-<div>
+<div class="afsnit">
     <p>Om os</p>
     <p>Shop</p>
     <p>Book os</p>
@@ -13,15 +13,15 @@
 <div>
     <p>Her finder du os:</p>
    <p>
-    Værkstedet i Lundtoftegade<br>Lundtoftegade 23, 1 sal<br>2200 København N
+    <strong>Værkstedet i Lundtoftegade</strong><br>Lundtoftegade 23, 1 sal<br>2200 København N
    </p>
-   <p>Værkstedet i Farum Midtpunkt<br>Nygårdterasserne 213A<br>3520 Farum</p>
-   <p>Mail: itmv@itmv.dk<br>Telefon: 60877307<br>CVR: 34449686</p>
+   <p><strong>Værkstedet i Farum Midtpunkt</strong><br>Nygårdterasserne 213A<br>3520 Farum</p>
+   <p><strong>Mail: </strong>itmv@itmv.dk<br><strong>Telefon: </strong>60877307<br><strong>CVR: </strong>34449686</p>
 </div>
 <div>
-    <h1>TILMELD NUHEDSBREV</h1>
-    <p>Tilmed</p>
-    EN STREG
+    <h1>TILMELD NYHEDSBREV</h1>
+
+    <p class="change">Tilmed</p>
 </div>
 </div>
 
@@ -31,8 +31,39 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     justify-items: center;
-    padding-top: 50px;
-    margin-top: 50px;
+    background-color: #FAF4EF;
+    grid-template-areas:  
+    'left middle right';
+  }
+
+  .afsnit{
+    line-height: 0.7;
+  }
+
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color: #3D5C6D;
+
+
+  h1{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .change{
+    color: white;
+    text-align: right;
   }
   
   </style>
