@@ -47,17 +47,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <div class="video-container">
       <div class="video-box1">
-        <video class="video" controls>
+        <video class="video" controls muted autoplay loop>
           <source src="/data_lon.webm" type="video/webm" />
         </video>
       </div>
       <div class="video-box2">
-        <video class="video" controls>
+        <video class="video" controls muted autoplay loop>
           <source src="/data_cirkel.webm" type="video/webm" />
         </video>
       </div>
       <div class="video-box3">
-        <video class="video" controls>
+        <video class="video" controls muted autoplay loop>
           <source src="/data_job.webm" type="video/webm" />
         </video>
       </div>
@@ -66,6 +66,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 </html>
 
 <style>
+  body {
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -74,29 +77,42 @@ import MainLayout from "../layouts/MainLayout.astro";
     position: relative;
   }
 
+  .container h1 {
+    line-height: 1.2;
+    margin-top: 0; /* Nulstil toppen margin */
+    margin-bottom: 5px;
+  }
+
+  .container p {
+    line-height: 1.2;
+    margin-top: 5px; /* Nulstil toppen margin */
+    margin-bottom: 15px;
+    padding: 0px;
+  }
   .box {
     width: 30%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .box1 {
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: 450px;
   }
 
   .box2 {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 195px;
+    right: 300px;
   }
 
   .box3 {
     position: absolute;
-    top: 50%;
+    top: 98%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-52%, -47%);
   }
 
   .box h1 {
@@ -114,10 +130,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    overflow: hidden;
   }
 
   .video {
-    width: 100%;
+    width: 50%;
     height: auto;
   }
 
@@ -126,18 +143,33 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin: 10px;
     position: absolute;
   }
+
   .video-box1 {
-    top: 20px;
-    left: 20px;
+    position: absolute;
+    top: 80px;
+    left: -40px;
   }
 
   .video-box2 {
-    bottom: 20px;
-    right: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 900px;
+    width: 70%;
+    overflow: hidden;
   }
 
   .video-box3 {
-    top: calc(50% - 50px); /* Juster vertikal position */
-    left: calc(50% - 50px); /* Juster horisontal position */
+    position: absolute;
+    top: calc(65% - 50px);
+    left: calc(5% - 50px);
+  }
+
+  .video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  .video::-webkit-media-controls-play-button,
+  .video::-webkit-media-controls-start-playback-button {
+    display: none !important;
   }
 </style>
