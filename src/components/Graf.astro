@@ -3,142 +3,85 @@ import "../styles/main.css";
 ---
 
 <img class="header-image" src="public/gradient.png" alt="gradient baggrund" />
-<div class="container">
-  <div class="box box1">
-    <h1>Vi har personer i job</h1>
-    <p>
-      Vi ansætter personer fra den sociale målgruppen i fleksjob, i
-      deltidsansættelse eller i småjob.
-    </p>
+
+<div class="flex_container">
+  <div class="flex_container2">
+    <div class="video1">
+      <video controls muted autoplay loop>
+        <source src="/data_lon.webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="text1">
+      <h1>Vi har personer i job</h1>
+      <p>
+        Vi ansætter personer fra den sociale målgruppen i fleksjob, i
+        deltidsansættelse eller i småjob.
+      </p>
+    </div>
   </div>
 
-  <div class="box box2">
-    <h1>Vi ansætter fra målgruppen</h1>
-    <p>
-      Der har i alt været 12 ansatte fra den sociale målgruppen i fleksjob, i
-      deltidsansættelse eller i småjob. Heraf er 4 blevet ansat i 2023.
-    </p>
-  </div>
+  <div class="flex_container">
+    <div class="flex_container2">
+      <div class="video2">
+        <video controls muted autoplay loop>
+          <source src="/data_cirkel.webm" type="video/webm" />
+        </video>
+      </div>
 
-  <div class="box box3">
-    <h1>Vi vækster med løntimer</h1>
-    <p>
-      I forhold til tidligere år har syerskerne arbejdet markant mere og vi har
-      fået skabet reelle deltidsjobs på værkstederne. En stigning på over 100%
-      fra 2022 til 2023
-    </p>
+      <div class="text2">
+        <h1>Vi ansætter fra målgruppen</h1>
+        <p>
+          Der har i alt været 12 ansatte fra den sociale målgruppen i fleksjob,
+          i deltidsansættelse eller i småjob. Heraf er 4 blevet ansat i 2023.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex_container">
+      <div class="flex_container2">
+        <div class="video3">
+          <video controls muted autoplay loop>
+            <source src="/data_job.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="text3">
+          <h1>Vi vækster med løntimer</h1>
+          <p>
+            I forhold til tidligere år har syerskerne arbejdet markant mere og
+            vi har fået skabet reelle deltidsjobs på værkstederne. En stigning
+            på over 100% fra 2022 til 2023
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      body {
+      }
+
+      .flex_container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .flex_container2 {
+        display: flex;
+      }
+
+      .video1 {
+      }
+
+      .text1 {
+      }
+
+      .video::-webkit-media-controls {
+        display: none !important;
+      }
+
+      .video::-webkit-media-controls-play-button,
+      .video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+      }
+    </style>
   </div>
 </div>
-
-<div class="video-container">
-  <div class="video-box1">
-    <video class="video" controls muted autoplay loop>
-      <source src="/data_lon.webm" type="video/webm" />
-    </video>
-  </div>
-  <div class="video-box2">
-    <video class="video" controls muted autoplay loop>
-      <source src="/data_cirkel.webm" type="video/webm" />
-    </video>
-  </div>
-  <div class="video-box3">
-    <video class="video" controls muted autoplay loop>
-      <source src="/data_job.webm" type="video/webm" />
-    </video>
-  </div>
-</div>
-
-<style>
-  body {
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
-
-  .container h1 {
-    line-height: 1.2;
-    margin-top: 0; /* Nulstil toppen margin */
-    margin-bottom: 5px;
-  }
-
-  .container p {
-    line-height: 1.2;
-    margin-top: 5px; /* Nulstil toppen margin */
-    margin-bottom: 15px;
-    padding: 0px;
-  }
-  .box {
-    width: 30%;
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .box1 {
-    position: relative;
-    top: -10%;
-    left: 25%;
-  }
-
-  .box2 {
-    position: relative;
-    bottom: -14%;
-    right: -9%;
-  }
-
-  .box3 {
-    position: relative;
-    top: 54%;
-    left: -17%;
-    transform: translate(-52%, -47%);
-  }
-
-  .box h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .box p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .video {
-    width: 50%;
-    height: auto;
-  }
-
-  .video-box1 {
-    position: relative;
-    top: -691px;
-    left: -90px;
-  }
-
-  .video-box2 {
-    position: relative;
-    bottom: 800px;
-    left: 950px;
-    width: 70%;
-    overflow: hidden;
-  }
-
-  .video-box3 {
-    position: relative;
-    top: -1180px;
-    left:;
-  }
-
-  .video::-webkit-media-controls {
-    display: none !important;
-  }
-
-  .video::-webkit-media-controls-play-button,
-  .video::-webkit-media-controls-start-playback-button {
-    display: none !important;
-  }
-</style>
