@@ -4,21 +4,22 @@ import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/main.css";
 ---
 
-<div class="content-container">
-  <h1>LAD OS SKABE EN LOKAL LØSNING <br />PÅ ET GLOBALT PROBLEM</h1>
-  <p>
-    Vores samarbejde med forskellige interessenter gør det muligt for os at <br
-    />
-     skabe jobmuligheder, netværk og livskvalitet for mennesker, som står <br
-    />udenfor det danske arbejdsmarked.
-  </p>
-  <Button>KØB NU</Button>
-</div>
+<section>
+  <div class="content-container">
+    <h1>LAD OS SKABE EN LOKAL LØSNING <br />PÅ ET GLOBALT PROBLEM</h1>
+    <p>
+      Vores samarbejde med forskellige interessenter gør det muligt for os at <br
+      />
+       skabe jobmuligheder, netværk og livskvalitet for mennesker, som står <br
+      />udenfor det danske arbejdsmarked.
+    </p>
+    <Button>KØB NU</Button>
+  </div>
 
-<div>
-  <img class="bukser" src="/bukser.png" alt="bukser">
-</div>
-
+  <div>
+    <img class="bukser" src="/bukser.png" alt="bukser" />
+  </div>
+</section>
 <!-- <img src="/buks2.webp" alt="Bukselomme 1" class="billede-1" />
 <div class="billede-container">
   <img src="/buks1.webp" alt="Bukselomme 2" class="billede-2" />
@@ -27,14 +28,32 @@ import "../styles/main.css";
 <img src="/langtråd.svg" alt="syning illustration" class="syning" /> -->
 
 <style>
-  .bukser{
+  section {
+    animation: fade-out;
+    animation-timeline: scroll();
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    10% {
+      opacity: 1;
+      scale: 1;
+    }
+    40% {
+      opacity: 0;
+      scale: 0;
+    }
+  }
+  .bukser {
     position: relative;
     top: -150px;
     left: -180px;
 
     overflow: hidden;
   }
- 
+
   .content-container {
     position: relative;
     margin-left: 138px;
@@ -56,7 +75,7 @@ import "../styles/main.css";
     margin-top: 0;
     margin-bottom: 10px;
   }
- 
+
   /*
   .billede-1 {
     position: relative;

@@ -39,12 +39,45 @@ import Team from "../components/Team.astro";
 
   #v {
     justify-self: end;
+    animation: left;
+    animation-timeline: scroll();
+  }
+
+  @keyframes left {
+    from {
+      transform: translate(0, 0); /* Startposition */
+      opacity: 1;
+    }
+    to {
+      transform: translate(-5500px, 3000px);
+      opacity: 0;
+    }
   }
 
   #h {
     justify-self: baseline;
+    /* position: fixed;
+    z-index: 2;
+    left: 700px;
+    top: 128px; */
+    /* height: 85%; */
+    animation: right;
+    animation-timeline: scroll();
   }
 
+  @keyframes right {
+    from {
+      transform: translate(0, 0); /* Startposition */
+      opacity: 1;
+    }
+    to {
+      transform: translate(
+        5500px,
+        3000px
+      ); /* Slutposition (ændre værdierne efter behov) */
+      opacity: 0;
+    }
+  }
   .repair {
     position: absolute; /* Positionér h1 absolut */
     top: 150px; /* Placer øverst i .grid */
@@ -59,7 +92,7 @@ import Team from "../components/Team.astro";
     top: 150px; /* Placer øverst i .grid */
     left: 58%; /* Centrer vandret i forhold til .grid */
     transform: translateX(-50%); /* Juster for at centrere præcist */
-    z-index: 1; /* Sørg for, at h1 er foran gardinerne */
+    z-index: 3; /* Sørg for, at h1 er foran gardinerne */
     font-size: 3rem;
   }
 </style>

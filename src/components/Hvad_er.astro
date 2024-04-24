@@ -2,32 +2,52 @@
 import "../styles/main.css";
 ---
 
-<div class="grid">
-  <div class="box">
-    <h2>Hvad er repair service?</h2>
-    <p>
-      HVAD TILBYDER VI? <br />Vi tilbyder reparation, tilpasning og fornyelse af
-      tøj til din virksomheds <br /> medarbejdere. Vores team består af to
-      syerske og en designer. <br /> De vil sidde klar ved symaskinerne, til at
-      hjælpe jer med at forlænge <br /> levetiden på tøjet. Vi tilbyder bl.a.
-      oplægning, reparation af lynlås <br /> og huller samt broderi m.m.
-    </p>
-    <p>
-      HVORNÅR? <br /> Sammen aftaler vi en fast dag, f.eks. hver anden uge, en
-      gang <br /> om måneden. Der vil være drop in og aflevering af tøjet om
-      morgenen. <br /> Vi bestræber os på at blive færdige med dagens
-      reparationer samme dag. <br /> Men det kan variere, afhængig af opgaven.
-    </p>
-    <p>
-      HVOR? <br />Vi kommer ud til din virksomhed med vores REPAIR SERVICE <br
-      /> (Københavnsområdet, tilgængeligt med offentlig transport)
-    </p>
+<section>
+  <div class="grid">
+    <div class="box">
+      <h2>Hvad er repair service?</h2>
+      <p>
+        HVAD TILBYDER VI? <br />Vi tilbyder reparation, tilpasning og fornyelse
+        af tøj til din virksomheds <br /> medarbejdere. Vores team består af to
+        syerske og en designer. <br /> De vil sidde klar ved symaskinerne, til
+        at hjælpe jer med at forlænge <br /> levetiden på tøjet. Vi tilbyder
+        bl.a. oplægning, reparation af lynlås <br /> og huller samt broderi m.m.
+      </p>
+      <p>
+        HVORNÅR? <br /> Sammen aftaler vi en fast dag, f.eks. hver anden uge, en
+        gang <br /> om måneden. Der vil være drop in og aflevering af tøjet om
+        morgenen. <br /> Vi bestræber os på at blive færdige med dagens
+        reparationer samme dag. <br /> Men det kan variere, afhængig af opgaven.
+      </p>
+      <p>
+        HVOR? <br />Vi kommer ud til din virksomhed med vores REPAIR SERVICE <br
+        /> (Københavnsområdet, tilgængeligt med offentlig transport)
+      </p>
+    </div>
+    <img class="img_class" src="/hvad_er.png" alt="" />
   </div>
-  <img class="img_class" src="/hvad_er.png" alt="" />
-</div>
-<img class="needle" src="/langtrad_nal.webp" alt="" />
+  <img class="needle" src="/langtrad_nal.webp" alt="" />
+</section>
 
 <style>
+  section {
+    animation: fade-in;
+    animation-timeline: scroll();
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    25% {
+      opacity: 1;
+      scale: 1;
+    }
+    40% {
+      opacity: 0;
+      scale: 0;
+    }
+  }
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
