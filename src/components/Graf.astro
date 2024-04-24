@@ -1,6 +1,5 @@
 ---
 import "../styles/main.css";
-import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <img class="header-image" src="public/gradient.png" alt="gradient baggrund" />
@@ -81,21 +80,21 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .box1 {
-    position: absolute;
-    top: 50px;
-    left: 450px;
+    position: relative;
+    top: -10%;
+    left: 25%;
   }
 
   .box2 {
-    position: absolute;
-    bottom: 195px;
-    right: 300px;
+    position: relative;
+    bottom: -14%;
+    right: -9%;
   }
 
   .box3 {
-    position: absolute;
-    top: 98%;
-    left: 50%;
+    position: relative;
+    top: 54%;
+    left: -17%;
     transform: translate(-52%, -47%);
   }
 
@@ -109,43 +108,29 @@ import MainLayout from "../layouts/MainLayout.astro";
     line-height: 1.5;
   }
 
-  .video-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    overflow: hidden;
-  }
-
   .video {
     width: 50%;
     height: auto;
   }
 
-  .video-box {
-    width: 30%;
-    margin: 10px;
-    position: absolute;
-  }
-
   .video-box1 {
-    position: absolute;
-    top: 80px;
-    left: -40px;
+    position: relative;
+    top: -691px;
+    left: -90px;
   }
 
   .video-box2 {
-    position: absolute;
-    bottom: -10px;
-    left: 900px;
+    position: relative;
+    bottom: 800px;
+    left: 950px;
     width: 70%;
     overflow: hidden;
   }
 
   .video-box3 {
-    position: absolute;
-    top: calc(65% - 50px);
-    left: calc(5% - 50px);
+    position: relative;
+    top: -1180px;
+    left:;
   }
 
   .video::-webkit-media-controls {
