@@ -3,7 +3,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/main.css";
 import Repair_service from "../components/Repair_service.astro";
 import Hvad_er from "../components/Hvad_er.astro";
-import Esg from "./esg.astro";
+import Esg from "../components/Esg.astro";
+import Hvorfor from "../components/Hvorfor.astro";
+import Graf from "../components/Graf.astro";
+import Team from "../components/Team.astro";
 ---
 
 <MainLayout title="Index">
@@ -15,6 +18,10 @@ import Esg from "./esg.astro";
   </div>
   <Repair_service />
   <Hvad_er />
+  <Esg />
+  <Hvorfor />
+  <Graf />
+  <Team />
 </MainLayout>
 
 <style>
