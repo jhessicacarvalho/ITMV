@@ -1,6 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/main.css";
+import Repair_service from "../components/Repair_service.astro";
+import Hvad_er from "../components/Hvad_er.astro";
+import Esg from "./esg.astro";
 ---
 
 <MainLayout title="Index">
@@ -10,6 +13,8 @@ import "../styles/main.css";
     <img id="v" src="/gardiner_v.webp" alt="" />
     <img id="h" src="/gardiner_h.webp" alt="" />
   </div>
+  <Repair_service />
+  <Hvad_er />
 </MainLayout>
 
 <style>

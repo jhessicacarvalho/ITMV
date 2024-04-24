@@ -1,0 +1,159 @@
+---
+import "../styles/main.css";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<img class="header-image" src="public/gradient.png" alt="gradient baggrund" />
+<div class="container">
+  <div class="box box1">
+    <h1>Vi har personer i job</h1>
+    <p>
+      Vi ansætter personer fra den sociale målgruppen i fleksjob, i
+      deltidsansættelse eller i småjob.
+    </p>
+  </div>
+
+  <div class="box box2">
+    <h1>Vi ansætter fra målgruppen</h1>
+    <p>
+      Der har i alt været 12 ansatte fra den sociale målgruppen i fleksjob, i
+      deltidsansættelse eller i småjob. Heraf er 4 blevet ansat i 2023.
+    </p>
+  </div>
+
+  <div class="box box3">
+    <h1>Vi vækster med løntimer</h1>
+    <p>
+      I forhold til tidligere år har syerskerne arbejdet markant mere og vi har
+      fået skabet reelle deltidsjobs på værkstederne. En stigning på over 100%
+      fra 2022 til 2023
+    </p>
+  </div>
+</div>
+
+<div class="video-container">
+  <div class="video-box1">
+    <video class="video" controls muted autoplay loop>
+      <source src="/data_lon.webm" type="video/webm" />
+    </video>
+  </div>
+  <div class="video-box2">
+    <video class="video" controls muted autoplay loop>
+      <source src="/data_cirkel.webm" type="video/webm" />
+    </video>
+  </div>
+  <div class="video-box3">
+    <video class="video" controls muted autoplay loop>
+      <source src="/data_job.webm" type="video/webm" />
+    </video>
+  </div>
+</div>
+
+<style>
+  body {
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .container h1 {
+    line-height: 1.2;
+    margin-top: 0; /* Nulstil toppen margin */
+    margin-bottom: 5px;
+  }
+
+  .container p {
+    line-height: 1.2;
+    margin-top: 5px; /* Nulstil toppen margin */
+    margin-bottom: 15px;
+    padding: 0px;
+  }
+  .box {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .box1 {
+    position: absolute;
+    top: 50px;
+    left: 450px;
+  }
+
+  .box2 {
+    position: absolute;
+    bottom: 195px;
+    right: 300px;
+  }
+
+  .box3 {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-52%, -47%);
+  }
+
+  .box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .box p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .video {
+    width: 50%;
+    height: auto;
+  }
+
+  .video-box {
+    width: 30%;
+    margin: 10px;
+    position: absolute;
+  }
+
+  .video-box1 {
+    position: absolute;
+    top: 80px;
+    left: -40px;
+  }
+
+  .video-box2 {
+    position: absolute;
+    bottom: -10px;
+    left: 900px;
+    width: 70%;
+    overflow: hidden;
+  }
+
+  .video-box3 {
+    position: absolute;
+    top: calc(65% - 50px);
+    left: calc(5% - 50px);
+  }
+
+  .video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  .video::-webkit-media-controls-play-button,
+  .video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+  }
+</style>
