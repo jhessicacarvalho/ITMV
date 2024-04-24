@@ -1,0 +1,102 @@
+---
+import Button from "../components/Button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/main.css";
+---
+
+<div class="content-container">
+  <h1>LAD OS SKABE EN LOKAL LØSNING <br />PÅ ET GLOBALT PROBLEM</h1>
+  <p>
+    Vores samarbejde med forskellige interessenter gør det muligt for os at <br
+    />
+     skabe jobmuligheder, netværk og livskvalitet for mennesker, som står <br
+    />udenfor det danske arbejdsmarked.
+  </p>
+  <Button>KØB NU</Button>
+</div>
+<img src="/buks2.webp" alt="Bukselomme 1" class="billede-1" />
+<div class="billede-container">
+  <img src="/buks1.webp" alt="Bukselomme 2" class="billede-2" />
+  <img src="/buks3.webp" alt="Bukselomme 3" class="billede-3" />
+</div>
+<img src="/langtråd.svg" alt="syning illustration" class="syning" />
+
+<style>
+  /* tekst*/
+  .content-container {
+    position: relative;
+    margin-left: 138px;
+    max-width: 850px;
+    padding: 25px;
+    position:;
+    top: 100px;
+    overflow: hidden;
+  }
+
+  .content-container h1 {
+    line-height: 1.1;
+    font-size: 40px;
+    margin-top: 100px; /* Nulstil toppen margin */
+    margin-bottom: 5px;
+  }
+
+  .content-container p {
+    font-size: 19px;
+    margin-top: 0; /* Nulstil toppen margin */
+    margin-bottom: 10px;
+  }
+  /* bukselommerne */
+  .billede-1 {
+    position: relative;
+    top: 150px;
+    left: -40px;
+    width: 300px;
+    height: auto;
+    transform: translateY(-5%) rotate(-42deg);
+    overflow: hidden;
+  }
+
+  .billede-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Sørg for at containeren dækker hele viewport */
+    overflow: hidden; /* Skjul overskydende indhold */
+    top: -400px;
+  }
+
+  .billede-2,
+  .billede-3 {
+    position: relative;
+    transform: translateY(-50%);
+    overflow: hidden;
+    padding-top: 52px;
+    padding-bottom: 50px;
+  }
+
+  .billede-2 {
+    left: 75%;
+    width: 350px;
+    z-index: 1;
+
+    transform: translateY(0) rotate(24deg);
+  }
+
+  .billede-3 {
+    left: 30%;
+    top: -10%;
+    width: 245px;
+    transform-origin: top;
+    transform: translateY(28%) rotate(-23deg);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .syning {
+    position: relative;
+    left: 228px;
+    top: -500px;
+    transform: translateY(-15%) rotate(2deg);
+    width: 1200px;
+    overflow: hidden;
+  }
+</style>
