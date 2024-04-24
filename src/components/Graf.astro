@@ -2,7 +2,7 @@
 import "../styles/main.css";
 ---
 
-<img class="header-image" src="public/gradient.png" alt="gradient baggrund" />
+<img class="header-image" src="/gradient.png" alt="gradient baggrund" />
 
 <div class="flex_container">
   <div class="flex_container2">
@@ -20,68 +20,98 @@ import "../styles/main.css";
     </div>
   </div>
 
-  <div class="flex_container">
-    <div class="flex_container2">
-      <div class="video2">
-        <video controls muted autoplay loop>
-          <source src="/data_cirkel.webm" type="video/webm" />
-        </video>
-      </div>
-
-      <div class="text2">
-        <h1>Vi ansætter fra målgruppen</h1>
-        <p>
-          Der har i alt været 12 ansatte fra den sociale målgruppen i fleksjob,
-          i deltidsansættelse eller i småjob. Heraf er 4 blevet ansat i 2023.
-        </p>
-      </div>
+  <div class="flex_container2">
+    <div class="video2">
+      <video controls muted autoplay loop>
+        <source src="/data_cirkel.webm" type="video/webm" />
+      </video>
     </div>
 
-    <div class="flex_container">
-      <div class="flex_container2">
-        <div class="video3">
-          <video controls muted autoplay loop>
-            <source src="/data_job.webm" type="video/webm" />
-          </video>
-        </div>
-        <div class="text3">
-          <h1>Vi vækster med løntimer</h1>
-          <p>
-            I forhold til tidligere år har syerskerne arbejdet markant mere og
-            vi har fået skabet reelle deltidsjobs på værkstederne. En stigning
-            på over 100% fra 2022 til 2023
-          </p>
-        </div>
-      </div>
+    <div class="text2">
+      <h1>Vi ansætter fra målgruppen</h1>
+      <p>
+        Der har i alt været 12 ansatte fra den sociale målgruppen i fleksjob, i
+        deltidsansættelse eller i småjob. <br />Heraf er 4 blevet ansat i 2023.
+      </p>
     </div>
+  </div>
 
-    <style>
-      body {
-      }
-
-      .flex_container {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .flex_container2 {
-        display: flex;
-      }
-
-      .video1 {
-      }
-
-      .text1 {
-      }
-
-      .video::-webkit-media-controls {
-        display: none !important;
-      }
-
-      .video::-webkit-media-controls-play-button,
-      .video::-webkit-media-controls-start-playback-button {
-        display: none !important;
-      }
-    </style>
+  <div class="flex_container2">
+    <div class="video3">
+      <video controls muted autoplay loop>
+        <source src="/data_job.webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="text3">
+      <h1>Vi vækster med løntimer</h1>
+      <p>
+        I forhold til tidligere år har syerskerne arbejdet markant mere og vi
+        har fået skabet reelle deltidsjobs på værkstederne. En stigning på over
+        100% fra 2022 til 2023
+      </p>
+    </div>
   </div>
 </div>
+
+<style>
+  /* .flex_container {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .flex_container2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .video1 {
+    flex: 1;
+    height: auto;
+    scale: 0.3;
+    margin-left: -20%;
+    margin-top: -10%;
+  }
+
+  .text1 {
+    flex: 1;
+    margin-left: -22%;
+    margin-top: -17%;
+  }
+
+  .video2 {
+    flex: 1;
+    height: auto;
+    scale: 0.3;
+    margin-left: 30%;
+    margin-top: -50%;
+  }
+
+  .text2 {
+    flex: 1;
+    margin-left: -120%;
+    margin-top: -50%;
+  }
+  .video3 {
+    flex: 1;
+    height: auto;
+    scale: 0.3;
+    margin-top: -50%;
+    margin-left: -20%;
+  }
+
+  .text3 {
+    flex: 1;
+    margin-top: -49%;
+    margin-left: -28%;
+  }
+
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  video::-webkit-media-controls-play-button,
+  video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+  }
+</style>
