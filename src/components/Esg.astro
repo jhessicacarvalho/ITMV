@@ -33,8 +33,13 @@ import "../styles/main.css";
     </div>
   </div>
 </section>
-<img class="sygning" src="/langtråd.svg" alt="" />
-<img class="buks" src="/buks3.webp" alt="" />
+
+<div>
+  <img class="bukser" src="/bukser2.png" alt="bukselommer og sytråd">
+</div>
+
+<!-- <img class="sygning" src="/langtråd.svg" alt="" />
+<img class="buks" src="/buks3.webp" alt="" /> -->
 
 <style>
   .box {
@@ -42,15 +47,15 @@ import "../styles/main.css";
     padding: 30px; /* indvendig polstring */
     margin-left: 200px;
     margin-right: 200px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     width: fit-content; /* justerer bredden til indholdet */
     align-self: center;
-    place-self: center;
+    /* place-self: center; */
   }
   .grid_2_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 40vh;
+    /* height: 40vh; */
   }
   .grid_2_1 img {
     height: 100%;
@@ -59,7 +64,15 @@ import "../styles/main.css";
     scale: 0.6;
     justify-self: start;
   }
-  .buks {
+
+  .bukser{
+    position: relative;
+    top: -500px;
+    left: -200px;
+    overflow: hidden;
+  }
+
+  /* .buks {
     position: relative;
     scale: 0.5;
     rotate: -20deg;
@@ -72,5 +85,5 @@ import "../styles/main.css";
     top: -80px;
     rotate: 5deg;
     overflow: hidden;
-  }
+  } */
 </style>
